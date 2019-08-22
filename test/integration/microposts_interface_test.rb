@@ -19,6 +19,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     content = "This micropost really ties the room together"
     # problem muss hier liegen normal hat das picture eine url 
     #picture = fixture_file_upload('test/fixtures/rails.png', 'image/png')
+    #byebug
     assert_difference 'Micropost.count', 1 do
       post microposts_path, params: { micropost: 
                                       { content: content }}
